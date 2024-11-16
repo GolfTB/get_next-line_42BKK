@@ -15,13 +15,12 @@ int main(void)
         return (1);
     }
 
-    // ทดสอบการอ่านแต่ละบรรทัด
     while ((line = get_next_line(fd)) != NULL)
     {
         printf("%s", line);
-        free(line); // จำเป็นต้อง free หลังจากใช้แต่ละบรรทัด
+        free(line);
     }
 
-    close(fd); // ปิดไฟล์หลังจากเสร็จ
+    close(fd);
     return (0);
 }
